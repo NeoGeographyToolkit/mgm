@@ -4,6 +4,7 @@
 #include <stdint.h>  // for uint8_t
 #include <stdbool.h> // for bool
 
+#define IIO_MAX_DIMENSION 5
 
 //
 //
