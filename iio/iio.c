@@ -487,9 +487,9 @@ int iio_type_id(size_t sample_size, bool ieeefp_sample, bool signed_sample)
 	if (ieeefp_sample) {
 		if (signed_sample) fail("signed floats are a no-no!");
 
-        // Fix for when long double and double have same size. Then compilation would fail.
-        if (sample_size == sizeof(double))
-          return IIO_TYPE_DOUBLE;
+		// Fix for when long double and double have same size. Then compilation would fail.
+		if (sample_size == sizeof(double))
+		  return IIO_TYPE_DOUBLE;
 
 		switch(sample_size) {
 		case sizeof(float):       return IIO_TYPE_FLOAT;
